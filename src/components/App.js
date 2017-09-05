@@ -13,6 +13,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
 class App extends Component {
+    componentWillMount () {
+        console.log("component will mount")
+    }
     render() {
         return (
             <div>
