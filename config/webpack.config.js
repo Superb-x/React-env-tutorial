@@ -50,7 +50,7 @@ module.exports = {
             },
             {
                 test: /\.(scss|sass)/,
-                exclude: ['node_modules'],
+                exclude: /node_modules/,
                 use: [
                     'style-loader',
                     'css-loader?&modules&localIdentName=[local]-[hash:base64:5]',
@@ -76,6 +76,10 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),//代码热替换
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"development"'//用于区分开发和生产环境
-        })
+        }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('../dist/vendor-mainfest.json')//引入预打包好的第三方库的映射文件
+        }),
     ],
 }
