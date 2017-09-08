@@ -1,0 +1,38 @@
+config/ 
+| +-webpack.config.dll.js
+| +-webpack.config.js
+| +-webpack.config.prod.js
+dist/ 
+| +-vendor-mainfest.json
+| +-vendor.dll.js
+server/ 
+| +-middleware/ 
+| | +-devMiddleware.js
+| | +-hotMiddleware.js
+| +-server.js
+src/ 
+| +-actions/ 
+| | +-counter.js
+| +-assets/ 
+| | +-index.html
+| +-components/ 
+| | +-counter/ 
+| | | +-index.js
+| +-constants/ 
+| | +-index.js
+| +-containers/ 
+| +-reducers/ 
+| | +-counter.js
+| | +-index.js
+| +-store/ 
+| | +-configureStore.js
+| +-style/ 
+| | +-app.scss
+| | +-index.scss
+| +-utils/ 
+| +-App.js
+| +-index.js
+list.py
+package-lock.json
+package.json
+tsconfig.json
