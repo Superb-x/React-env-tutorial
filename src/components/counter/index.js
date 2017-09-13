@@ -27,7 +27,7 @@ class Counter extends Component {
             <div>
                 Clicked: {value} times
                 {' '}
-                <button onClick={onIncrement}>+</button>
+                <button onClick={onIncrement}>增加</button>
                 {' '}
                 <button onClick={onDecrement}>-</button>
                 {' '}

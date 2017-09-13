@@ -1,6 +1,13 @@
+build/ 
+| +-index.html
+| +-main.5377ed83094987506066b40a461c7b3a.css
+| +-main.d2aa1.js
+| +-manifest.d4607.js
+| +-stats.html
+| +-vendor.5a930.js
 config/ 
+| +-webpack.config.dev.js
 | +-webpack.config.dll.js
-| +-webpack.config.js
 | +-webpack.config.prod.js
 dist/ 
 | +-vendor-mainfest.json
@@ -20,7 +27,6 @@ src/
 | | | +-index.js
 | +-constants/ 
 | | +-index.js
-| +-containers/ 
 | +-reducers/ 
 | | +-counter.js
 | | +-index.js
@@ -29,7 +35,6 @@ src/
 | +-style/ 
 | | +-app.scss
 | | +-index.scss
-| +-utils/ 
 | +-App.js
 | +-index.js
 list.py

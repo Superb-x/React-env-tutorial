@@ -1,6 +1,6 @@
 const Koa = require("koa")
 const webpack = require("webpack")
-const webpackConfig = require("../config/webpack.config")
+const webpackConfig = require("../config/webpack.config.dev")
 const hotMiddleware = require("./middleware/hotMiddleware")
 const devMiddleware = require("./middleware/devMiddleware")
 const path  = require("path")
@@ -26,9 +26,9 @@ app.use(devMiddleware(compiler, {
 }))
 
 app.use(hotMiddleware(compiler, {
-    // log: console.log,
-    // path: '/__webpack_hmr',
-    // heartbeat: 10 * 1000
+    log: console.log("lalalla"),
+    path: '/__webpack_hmr',
+    heartbeat: 10 * 1000
 }))
 
 // 静态文件

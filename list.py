@@ -5,7 +5,7 @@ cType = ['.py', '.html', '.css', '.scss', '.js', '.json', '.sql', '.gitignore', 
 with open ("dir.txt", "w") as f:
     def search(path, deep):
         for dir in os.listdir(path):
-            if dir == 'node_modules' or dir == '.git' or dir == '.vscode':
+            if dir == 'node_modules' or dir == '.git' or dir == '.vscode': #避开这些不需要列出的文件夹
                 continue
             d = os.path.join(path, dir)
             if os.path.isdir(d):
@@ -13,7 +13,7 @@ with open ("dir.txt", "w") as f:
                     f.write(dir+'/ \n')  
                 else:  
                     f.write('| '*deep+'+-'+dir+'/ \n') 
-                search(d, deep+1)
+                search(d, deep+1) #递归
 
         for file in os.listdir(path):
             fi = os.path.join(path, file)
